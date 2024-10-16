@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="shortcut icon" href="img/Logo-site.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .mensagem {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .mensagem img {
+            width: 200px;
+            height: auto;
+        }
+        .mensagem p {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="celular__cabeca">
+        <img src="img/Netflix_logo.png" alt="Logo da netflix" class="celular__logo">
+        <img src="img/Editar-perfil.png" alt="Gerenciar Perfis" class="celular__edit">
+    </div>
+
+    <section class="escolha">
+        <h1 class="escolha__texto">Quem está assistindo?</h1>
+        <ul class="escolha__perfil">
+            <li class="escolha__lista">
+                <a href="principal.html" class="perfil"><img src="img/Perfil.jpg" alt="Foto de perfil" class="perfil__foto"></a>
+                <p class="perfil__texto">Larissa</p>
+            </li>
+
+            <li class="escolha__lista" id="addPerfil">
+                <img src="img/Mais-perfil.png" alt="Adicionar perfil" class="perfil__foto mais">
+                <p class="perfil__texto">Adicionar perfis</p>
+            </li>
+        </ul>
+        <button class="botao">Gerenciar perfis</button>
+    </section>
+
+    <div class="mensagem" id="mensagem">
+        <img src="img/giphy.gif" alt="GIF de aviso">
+        <p>Território exclusivo!</p>
+        <p>Este site é protegido por um amor inquebrável, vá embora.</p>
+    </div>
+
+    <script>
+        // Função para mostrar a mensagem e o gif
+        document.getElementById('addPerfil').addEventListener('click', function() {
+            var mensagem = document.getElementById('mensagem');
+            mensagem.style.display = 'block';
+
+            // Após 10 segundos, oculta a mensagem, em vez de fechar a janela
+            setTimeout(function() {
+                mensagem.style.display = 'none';
+            }, 10000);
+        });
+    </script>
+</body>
+</html>
