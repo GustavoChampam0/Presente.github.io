@@ -1,0 +1,144 @@
+/* Animações */
+@keyframes slidein {
+    from {
+        margin-top: 50px;
+    }
+    to {
+        margin-top: 120px;
+    }
+}
+
+/* Estilos Gerais */
+.celular__cabeca {
+    display: none;
+}
+
+.nlogo,
+.container__texto__mobile,
+.mais__info {
+    display: none;
+}
+
+.container__background {
+    background-image: url(img/Background-principalMobile.png);
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+    .celular__cabeca {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .celular__logo {
+        width: 130px;
+        margin: 2em 0 2em 5em;
+    }
+
+    .escolha__texto {
+        text-align: center;
+        font-size: 40px;
+        margin-top: 3em;
+    }
+
+    .escolha__lista {
+        scale: 1;
+        margin: 3em 15px;
+    }
+
+    .perfil__foto {
+        width: 100px;
+    }
+
+    .celular__edit {
+        width: 30px;
+        margin-left: 5em;
+        transition: opacity 0.3s, scale 0.3s; /* Adiciona transição suave */
+    }
+
+    .celular__edit:hover {
+        cursor: pointer;
+        opacity: 0.6;
+        scale: 0.9;
+    }
+
+    .container__logo,
+    .nlogo {
+        display: none; /* Combinei a propriedade de display */
+    }
+
+    .nlogo {
+        display: flex;
+        width: 20px;
+        margin: 0 15px;
+    }
+
+    .cabecario {
+        width: 100%;
+    }
+
+    .cabecario__item {
+        margin: 0 8%;
+    }
+
+    .mobile__sumir {
+        display: none;
+    }
+
+    .cabecario__lista {
+        margin: 0;
+    }
+
+    .container__titulo {
+        width: 75%;
+        margin: 160px 0 0 10px;
+    }
+
+    .container__lista {
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+    }
+
+    .carrossel_item {
+        scroll-snap-align: start;
+    }
+
+    .container__video {
+        margin: 5px 0;
+    }
+
+    .cropped {
+        margin: 0;
+    }
+
+    .container__texto__mobile {
+        display: inline-block;
+        font-size: 18px;
+        margin: 20px 0 30px 15px;
+    }
+
+    .info {
+        display: inline-flex;
+        width: 70px;
+        margin: 0;
+    }
+
+    .container__botao {
+        margin: 150px 0 20px 10px;
+    }
+
+    .play {
+        margin: 0;
+    }
+
+    .filme5 {
+        width: 80%;
+    }
+
+    #btnleft,
+    #btnright {
+        display: none; /* Combinei a propriedade de display */
+    }
+}

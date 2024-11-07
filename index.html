@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Termos de uso</title>
+
+        <style>
+            body{
+            background-color: rgb(11, 125, 255);
+            color: rgb(255, 11, 174)
+            }
+
+            .painel{
+                background-color: white;
+                border: 6px outset rgb(255, 11, 174);
+                width: 300px;
+                height: 500px;
+                padding: 4px;
+                margin: auto;
+                border-radius: 20px;
+                text-align: center;
+                padding-top: 2px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+
+            #sim{
+                width: 80px;
+                height: 40px;
+                background-color: rgb(255, 11, 174);
+                border: 2px outset white;
+                border-radius: 10px;
+                color: white;
+                margin-left: -80px;
+            }
+
+            #nao{
+                position: absolute;
+                width: 80px;
+                height: 40px;
+                background-color: rgb(255, 11, 174);
+                border: 2px outset white;
+                border-radius: 10px;
+                color: white;
+                margin-left: 10px;
+            }
+
+            .bnt{
+                padding: 1px;
+                display: inline-block;
+                width: 220px;
+                height: 220px;
+                cursor: pointer;
+            }
+
+            .modal{
+                width: 300px;
+                height: 800px;
+                background-color: rgb(255, 11, 174);
+                transform: translate(-7%,-60%);
+                cursor: pointer;
+                display: none;
+                animation: animate;
+                animation-duration: 800ms;
+                padding: 20px;
+                color: white;
+                /*margin-top: -180px ;*/
+                border-radius: 20px;
+                box-shadow: 8px 8px rgb(161, 3, 109);
+            }
+            @keyframes animate{
+                from{opacity: 1;}
+                from{opacity: 0;}
+            }
+
+            .fechar{
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                float: right;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="painel">
+            <h2>Sistema de Controle</h2>
+            <h5>Você acaba de completar 1 ano sendo a pessoa mais feliz do mundo. Para renovação do seu contrato, favor leia os termos de uso descritos abaixo.</h5>
+            
+            <div onclick="acao()" class="bnt">
+                <img src="https://media.tenor.com/Z_KEDm9F_hQAAAAM/document-office.gif" alt="">
+            </div>
+           
+            <h5>Li e estou de acordo com os termos descritos no Sistema de Controle.</h5>
+
+            <a href="força.html"><button id="sim"> Aceitar :)</button></a>
+            <button onmouseover="fuja()" id="nao"> Recusar :(</button>
+            </br>
+
+            <div class="modal">
+                <div onclick="fechar()" class="fechar">✖️</div>
+                <h1>Termo de Uso</h1>
+                <h3>1. Concordo em tratar o senhorito Gustavo feito um princeso;</h3>
+                <h3>2. Me responsabilizo por todo e qualquer dano sentimental envolvendo o Gustavo, provendo assim, amor e carinho até que ele fique bem;</h3>
+                <h3>3. Prometo beijos, abraços e massagens incondicionais;</h3>
+                <h3>4. Aceito todo e qualquer drama por parte do Gustavo sem julgamentos prévios;</h3>
+                <h3>5. Prometo rir de todas as piadas ruins do Gustavo independente de cor, nacionalidade, gênero e gordura corporal;</h3>
+                <h3>6. Juro deixar o Gustavo jogar sem qualquer reclamação;</h3>
+            </div>
+        </div>
+
+        <script>
+            function acao(){
+                let modal = document.querySelector('.modal')
+                modal.style.display = 'block'
+            }
+
+            function fechar(){
+                let modal = document.querySelector('.modal')
+                modal.style.display = 'none'
+            }
+
+            //"PARABÉNS!", "Você concluiu o desafio do amor. Agora clique no ✈️ para ir voando até os termos de uso, leia-os atentamente pois seu presente está em jogo...");
+            //<img src="https://media.tenor.com/Z_KEDm9F_hQAAAAM/document-office.gif" alt="">
+            function fuja(){
+                var BotaoNão = document.getElementById("nao");
+
+                var LarguraJanela = window.innerWidth;
+                var AlturaJanela = window.innerHeight;
+
+                var maxX = LarguraJanela - BotaoNão.offsetWidth;
+                var maxY = AlturaJanela - BotaoNão.offsetHeight;
+
+                var aleatorioX = Math.floor(Math.random() * maxX);
+                var aleatorioY = Math.floor(Math.random() * maxY);
+
+                BotaoNão.style.left = aleatorioX + "px";
+                BotaoNão.style.top = aleatorioY + "px";
+            }
+        </script>
+    </body>
+
+</html>
